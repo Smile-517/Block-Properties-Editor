@@ -1,0 +1,14 @@
+#ifndef RESOURCEBLOCKID_H
+#define RESOURCEBLOCKID_H
+
+#include "Objects/OneBlockId.h"
+
+// forward declaration
+class PatchBlockId;
+
+class ResourceBlockId : public OneBlockId {
+   protected:
+    void insertWord(string wordIn, ResourceBlockId* resourceOneBlockIdList, PatchBlockId* patchOneBlockIdList);
+};
+
+#endif  // RESOURCEBLOCKID_H

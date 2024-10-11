@@ -1,0 +1,40 @@
+#include "Objects/PatchBlockId.h"
+
+#include <iostream>
+#include <string>
+
+#include "Config.h"
+#include "Objects/OneBlockId.h"
+
+using namespace std;
+
+void PatchBlockId::insertWord(string wordIn, ResourceBlockId* resourceOneBlockIdList,
+                              PatchBlockId* patchOneBlockIdList) {
+    if (wordIn != "") {  // So, "vine dirt stone    " is not the case. (It ignores useless whitespaces.)
+
+        // Check for duplicated words in resource file.
+
+        // if (!foundSameWord) {  // If there is no same word, register wordIn in wordList.
+        wordList[wordNum] = wordIn;
+        wordNum++;
+        allWordNum++;
+
+        if (wordNum > maxWord - 1) {
+            cerr << "ERROR: Too many words at block." << this->getBlockId() << " in resource file! (max: " << maxWord
+                 << ")" << endl;
+            system("pause");
+            exit(1);
+        }
+        // } else {  // If there is same word in wordList, save that word for print.
+        //     uselessWordList[uselessWordNum] = wordIn;
+        //     uselessWordNum++;
+        //     allUselessWordNum++;
+
+        //     if (uselessWordNum > maxWord - 1) {
+        //         cerr << "ERROR: Too many useless words in some block ID! (max: " << maxWord << ")" << endl;
+        //         system("pause");
+        //         exit(1);
+        //     }
+        // }
+    }
+}

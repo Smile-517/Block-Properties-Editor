@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "filesystem": "cpp",
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp",
+        "xutility": "cpp",
+        "algorithm": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "utility": "cpp",
+        "string": "cpp",
+        "fstream": "cpp"
+    }
+}
